@@ -1,0 +1,20 @@
+{
+    "version": 4,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 23,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "pi-pico",
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE":"MinSizeRel",
+                "CMAKE_TRY_COMPILE_TARGET_TYPE":"STATIC_LIBRARY"
+            },
+            "toolchainFile": "${env:PICO_SDK_PATH}/cmake/preload/toolchains/pico_arm_gcc.cmake",
+            "binaryDir": "${sourceDir}/build/vsc-${presetName}"
+        }
+    ]
+}
