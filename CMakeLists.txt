@@ -26,7 +26,7 @@ add_executable(${PROJECT_NAME} ${SRC_LIST})
 
 pico_generate_pio_header(${PROJECT_NAME} ${CMAKE_CURRENT_LIST_DIR}/src/ws2812.pio OUTPUT_DIR ${CMAKE_CURRENT_BUILD_DIR}/generated)
 
-pico_set_program_name(${PROJECT_NAME} "RP2040_Zero_Test")
+pico_set_program_name(${PROJECT_NAME} "led-blink-wsh-zero")
 pico_set_program_version(${PROJECT_NAME} "0.1")
 
 pico_enable_stdio_uart(${PROJECT_NAME} 0)
